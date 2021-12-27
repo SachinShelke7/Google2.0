@@ -8,7 +8,7 @@ import Response from "../Response";
 
 function search({ results }) {
   const router = useRouter();
-  // console.log(results);
+  console.log(results);
   return (
     <div>
       <Head>
@@ -27,20 +27,20 @@ function search({ results }) {
 export default search;
 
 export async function getServerSideProps(context) {
-  const useDummyData = false;
+  const useDummyData = true;
   const startIndex = context.query.start || "0";
 
   const data = useDummyData
     ? Response
     : await fetch(
-        `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${context.query.term}&start=${startIndex}`
+        `https://www.googleapis.com/customsearch/v1?key=AIzaSyD2bs_E5ifXho1AspPFZbsnluadVEG87wE&cx=642cc3f3a49a2ee1c&q=${context.query.term}&start=${startIndex}`
       ).then((response) => response.json());
-  
-      // const data = useDummyData
-      // ? Response
-      // : await fetch(
-      //     `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${context.query.term}&start=${startIndex}`
-      //   ).then((response) => response.json());
+
+  // const data = useDummyData
+  // ? Response
+  // : await fetch(
+  //     `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${context.query.term}&start=${startIndex}`
+  //   ).then((response) => response.json());
 
   return {
     props: {
