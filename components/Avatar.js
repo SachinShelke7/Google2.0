@@ -1,11 +1,14 @@
+import Image from 'next/image'
 import React from 'react'
 
 function Avatar({url, className}) {
     return (
-        <img loading="lazy"
+        <Image
+        width={50}
+        height={40}
         src={url}
         alt="Profile Pic"
-        className={`h-10 rounded-full cursor-pointer transition duration-150 transform hover:scale-110 ${className}
+        className={`rounded-full cursor-pointer transition duration-150 transform hover:scale-110 ${className}
         `}
         />
             
