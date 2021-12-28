@@ -32,12 +32,12 @@ function Header() {
         alt="Image"
       />
       <form className="flex flex-grow border border-gray-200 rounded-full shadow-lg
-      max-w-3xl items-center px-6 py-3 ml-10 mr-5">
+      max-w-3xl items-center px-6 py-2 sm:py-3 ml-2 sm:ml-10 mr-5">
         <input ref={searchInputRef} type="text" 
         className="flex-grow w-full focus:outline-none"
         />
         <XIcon 
-        className="h-7 mr-2 sm=mr-3 text-gray-500 cursor-pointer transition duration-100 transform hover:scale-125"
+        className="h-7 mr-0 sm=mr-3 text-gray-500 cursor-pointer transition duration-100 transform hover:scale-125"
         onClick={() => (searchInputRef.current.value ="")}
         />
         <MicrophoneIcon 
@@ -48,7 +48,7 @@ function Header() {
         <button hidden onClick={search} type="submit">Search</button>
       </form>
       <Avatar url='https://lh3.googleusercontent.com/ogw/ADea4I5nN7BhPoDRKOMgHyE-TK5Ugdv6J9tFZ5oaGWrZuA=s83-c-mo'
-      className="ml-auto"/>
+      className="ml-auto" />
       </div>
       {/* header */}
       <HeaderOptions />
