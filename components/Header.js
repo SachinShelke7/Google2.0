@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <header className="sticky top-0 bg-white">
-        <div className="flex w-full p-6 item-center">
+        <div className="flex w-full p-6 items-center">
       <Image
         src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
         priority

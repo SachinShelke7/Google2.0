@@ -12,13 +12,13 @@ function SearchResults({ results }) {
 
       {results.items?.map((result) => (
         <div key={result.link} className="max-w-xl mb-8">
-          <div className="group">
+          <div className="group flex flex-col">
             <a href={result.link} className="text-sm">
               {result.formattedUrl}
             </a>
-            <a href="{result.link">
-              <h2 className="truncate text-xl text-blue-800 font-medium group-hover:underline">{result.title}</h2>
-            </a>
+            {/* <a href="{result.link"> */}
+              <a href={result.link} className="truncate text-xl text-blue-800 font-medium group-hover:underline">{result.title}</a>
+            {/* </a> */}
           </div>
           <p className="line-clamp-2">{result.snippet}</p>
         </div>
